@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 interface CinematicIntroProps {
-  onEnterStudio: (targetTab?: string) => void;
+  onEnterStudio: (targetTab?: string, startGuide?: boolean) => void;
 }
 
 interface SceneData {
@@ -382,7 +382,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onEnterStudio })
                 return (
                   <button
                     key={orb.id}
-                    onClick={() => playDemoAudio(`/api/audio/${orb.id}/stream`, orb.id)}
+                    onClick={() => playDemoAudio(`/cloud_seed/originals/${orb.id}.wav`, orb.id)}
                     style={{
                       padding: '14px 12px',
                       borderRadius: '14px',
@@ -425,7 +425,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onEnterStudio })
           {sceneIdx === 1 && (
             <div style={{ display: 'flex', justifyContent: 'center', gap: '18px' }}>
               <button
-                onClick={() => playDemoAudio('/api/audio/AUD-ORIG-001/stream', 'ab-orig')}
+                onClick={() => playDemoAudio('/cloud_seed/originals/AUD-ORIG-001.wav', 'ab-orig')}
                 style={{
                   padding: '16px 28px',
                   borderRadius: '14px',
@@ -450,7 +450,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onEnterStudio })
               </div>
 
               <button
-                onClick={() => playDemoAudio('/api/audio/AUD-CONV-001/stream', 'ab-conv')}
+                onClick={() => playDemoAudio('/cloud_seed/converted/AUD-CONV-001.wav', 'ab-conv')}
                 style={{
                   padding: '16px 28px',
                   borderRadius: '14px',
@@ -509,7 +509,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onEnterStudio })
             <div style={{ display: 'flex', justifyContent: 'center', gap: '14px' }}>
               <button
                 className="btn-primary-orange"
-                onClick={() => onEnterStudio('workspace')}
+                onClick={() => onEnterStudio('workspace', false)}
                 style={{ padding: '14px 28px', fontSize: '14px' }}
               >
                 <Disc size={18} />
@@ -517,11 +517,11 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onEnterStudio })
               </button>
               <button
                 className="btn-sci-cyan"
-                onClick={() => onEnterStudio('multichar')}
+                onClick={() => onEnterStudio('workspace', true)}
                 style={{ padding: '14px 24px', fontSize: '14px' }}
               >
                 <Layers size={18} />
-                <span>다중 캐릭터 스튜디오</span>
+                <span>사용자 가이드 투어와 함께 시작</span>
               </button>
             </div>
           )}

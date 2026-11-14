@@ -162,8 +162,8 @@ const RadialGauge: React.FC<{ value: number; label: string; sub: string; color: 
 };
 
 export const App: React.FC = () => {
-  const [showCinemaIntro, setShowCinemaIntro] = useState<boolean>(false);
-  const [showGuidedDemo, setShowGuidedDemo] = useState<boolean>(true);
+  const [showCinemaIntro, setShowCinemaIntro] = useState<boolean>(true);
+  const [showGuidedDemo, setShowGuidedDemo] = useState<boolean>(false);
   const [showVerifyModal, setShowVerifyModal] = useState<boolean>(false);
   const [verifyReport, setVerifyReport] = useState<{
     all_passed: boolean;
@@ -532,9 +532,10 @@ export const App: React.FC = () => {
     <div className="studio-shell">
       {showCinemaIntro && (
         <CinematicIntro
-          onEnterStudio={(targetTab) => {
+          onEnterStudio={(targetTab, startGuide) => {
             if (targetTab) setActiveTab(targetTab);
             setShowCinemaIntro(false);
+            if (startGuide) setShowGuidedDemo(true);
           }}
         />
       )}
@@ -551,7 +552,7 @@ export const App: React.FC = () => {
       )}
 
       {/* Spotlight Coach-Mark UI User Guide Overlay */}
-      {showGuidedDemo && (
+      {showGuidedDemo && !showCinemaIntro && (
         <GuidedDemoOverlay
           onClose={() => setShowGuidedDemo(false)}
           onEnsureWorkspaceTab={ensureWorkspaceTab}
