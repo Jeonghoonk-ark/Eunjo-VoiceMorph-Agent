@@ -1,0 +1,10 @@
+{
+  "model_id": "MDL-RVC-EUNJO-01",
+  "voice_id": "CHARACTER-001",
+  "voice_name": "EUNJO AURA (은조 아우라)",
+  "model_type": "RVC-v2.5",
+  "model_version": "2.5.0",
+  "license_status": "VERIFIED",
+  "consent_status": "APPROVED",
+  "model_file_hash": "sha256:e1685c85d91c8d64c4c3454b149d8aec"
+}

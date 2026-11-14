@@ -1,0 +1,10 @@
+{
+  "model_id": "MDL-RVC-NOVA-02",
+  "voice_id": "CHARACTER-002",
+  "voice_name": "NOVA-K (노바 케이)",
+  "model_type": "RVC-v2.5",
+  "model_version": "2.5.0",
+  "license_status": "VERIFIED",
+  "consent_status": "APPROVED",
+  "model_file_hash": "sha256:67b1c4f98d6467ec355d8547cf9d81bb"
+}

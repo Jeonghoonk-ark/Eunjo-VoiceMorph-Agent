@@ -1,0 +1,15 @@
+# Dependencies & Virtual Environments
+node_modules/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.wrangler/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.log

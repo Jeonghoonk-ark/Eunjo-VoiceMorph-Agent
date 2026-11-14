@@ -1,0 +1,10 @@
+{
+  "model_id": "MDL-OV2-VALKYRIE-04",
+  "voice_id": "CHARACTER-004",
+  "voice_name": "VALKYRIE-X (발키리 엑스)",
+  "model_type": "OpenVoice-V2",
+  "model_version": "2.1.0",
+  "license_status": "VERIFIED",
+  "consent_status": "APPROVED",
+  "model_file_hash": "sha256:83ec48fa683267f8e385df18717a27ca"
+}

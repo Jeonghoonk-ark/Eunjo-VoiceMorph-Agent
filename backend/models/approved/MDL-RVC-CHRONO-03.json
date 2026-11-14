@@ -1,0 +1,10 @@
+{
+  "model_id": "MDL-RVC-CHRONO-03",
+  "voice_id": "CHARACTER-003",
+  "voice_name": "CHRONO-7 (크로노 세븐)",
+  "model_type": "RVC-v2.5",
+  "model_version": "2.5.0",
+  "license_status": "VERIFIED",
+  "consent_status": "APPROVED",
+  "model_file_hash": "sha256:fa9cc22ef0cb14eeedf7ad1fcc25dd86"
+}
